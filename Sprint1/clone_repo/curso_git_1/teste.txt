@@ -1,0 +1,12 @@
+Testando repo
+a
+b11111
+c
+d
+
+
+<<<<<<< HEAD
+ outr 
+=======
+outro branch pra fazer merge
+>>>>>>> outro_branch
