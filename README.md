@@ -13,8 +13,12 @@ Como hobbie gosto muito de assistir séries e filmes, ouvir música e viajar.
 ### Sprint 1
 
 - [ x ] Github
+    O curso abordou o que é o GIT, como instalá-lo no Windows e Linux. Ele ensinou o que é um repositório, como adicionar arquivos no projeto, salvar alterações, enviar códigos ao repositório, receber alterações, clonar repositório e demais temas correlatos.
+    Foi possível também aprender a utilizar o branch, o submodule e como utilizar as tags, a limpeza dos arquivos untracked e a compressão do reppositório.
+    E por fim, foi abordado o que é markdown, como criar títulos, listas, inserir imagens, links, lista de tarefas e código fonte.
 - [ x ] Linux
-
+    Nesse curso aprendemos acerca do terminal e shell, os comandos. Foi desenvolvido o tema acerca da criação de diretórios, remoção, cópia e como mover arquivos e diretórios. Foi visto também como instalar, atualizar, buscar e limpar pacotes e aplicativos, bem como aprensetado os editores de texto Nano e Vim.
+    Nós aprendemos como adicionar, deletar, bloquear e desbloquear usuários, e também criar e deletar grupos. Foi abordado o gerenciamento de permissões, de redes, bem como a compactação e descompactação dos arquivos.
 ### Sprint 2
 
 - [] Loading...
