@@ -1,0 +1,3 @@
+select a.codautor, a.nome, count(l.cod) as quantidade_publicacoes
+from autor as a 
+left join livro as l on l.autor = a.codautor

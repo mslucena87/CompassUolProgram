@@ -1,0 +1,8 @@
+select count(l.cod) as quantidade, e.nome, en.estado, en.cidade
+from editora as e
+left join livro as l on l.editora = e.codEditora
+left join endereco as en on e.endereco = en.codEndereco
+group by e.nome
+having quantidade > 0
+order by quantidade desc
+limit 5

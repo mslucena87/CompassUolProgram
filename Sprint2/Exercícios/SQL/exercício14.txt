@@ -1,0 +1,7 @@
+SELECT
+    ve.estado,
+    ROUND(AVG(ve.qtd*ve.vrunt), 2) AS gastomedio
+FROM tbvendas AS ve
+WHERE ve.status = "Concluído"
+GROUP BY ve.estado
+ORDER BY gastomedio DESC;

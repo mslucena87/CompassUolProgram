@@ -1,0 +1,10 @@
+SELECT v.cdvdd, v.nmvdd
+FROM tbvendedor AS v
+LEFT JOIN (
+    SELECT cdvdd, COUNT(*) AS total_vendas
+    FROM tbvendas
+    WHERE status = "Concluído"
+    GROUP BY cdvdd
+) AS ve ON v.cdvdd = ve.cdvdd
+ORDER BY ve.total_vendas DESC
+LIMIT 1;

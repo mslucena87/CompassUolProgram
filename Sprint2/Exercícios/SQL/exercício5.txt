@@ -1,0 +1,7 @@
+select distinct a.nome
+from autor as a
+left join livro as l on l.autor = a.codautor
+left join editora as ed on l.editora = ed.codeditora
+left join endereco as en on ed.endereco = en.codendereco
+where en.estado <> 'PARANÁ' and en.estado <> 'SANTA CATARINA' and en.estado <> 'RIO GRANDE DO SUL'
+order by a.nome asc

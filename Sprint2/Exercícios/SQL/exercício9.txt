@@ -1,0 +1,10 @@
+SELECT v.cdpro, v.nmpro
+FROM tbvendas AS v
+LEFT JOIN (
+    SELECT cdpro, COUNT(*) AS total_vendas
+    FROM tbvendas
+    WHERE dtven BETWEEN '2014-02-03' AND '2018-02-02'	AND status = "Concluído"
+    GROUP BY cdpro
+) AS ve ON v.cdpro = ve.cdpro
+ORDER BY ve.total_vendas DESC
+LIMIT 1;

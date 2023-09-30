@@ -1,0 +1,10 @@
+select ve.cdcli, ve.nmcli, ve2.gasto
+from tbvendas AS ve
+LEFT JOIN
+    (SELECT cdcli, SUM(qtd *vrunt) AS gasto 
+     FROM tbvendas
+     WHERE status = "Concluído"
+     GROUP BY cdcli) AS ve2
+ON ve.cdcli = ve2.cdcli 
+ORDER BY gasto DESC
+LIMIT 1

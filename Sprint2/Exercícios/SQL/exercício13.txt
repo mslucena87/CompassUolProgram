@@ -1,0 +1,6 @@
+SELECT ve.cdpro, ve.nmcanalvendas, ve.nmpro, SUM(ve.qtd) AS quantidade_vendas
+FROM tbvendas AS ve
+WHERE ve.status = "Concluído" AND ve.nmcanalvendas IN ("Matriz", "Ecommerce")
+GROUP BY ve.cdpro, ve.nmcanalvendas
+ORDER BY quantidade_vendas ASC
+LIMIT 10

@@ -1,0 +1,12 @@
+select d.cddep, d.nmdep, d.dtnasc, ve.valor_total_vendas
+FROM tbdependente AS d
+LEFT JOIN (
+    SELECT cdvdd, SUM(qtd*vrunt) AS valor_total_vendas
+    FROM tbvendas
+    WHERE status = "Concluído"
+    GROUP BY cdvdd
+    HAVING valor_total_vendas > 0
+) AS ve
+ON d.cdvdd = ve.cdvdd
+ORDER BY ve.valor_total_vendas ASC
+LIMIT 1
