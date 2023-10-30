@@ -1,0 +1,11 @@
+1. Para criação da imagem do projeto "carguru":
+    - docker build -f ./carguru/Dockerfile -t carguru:latest ./carguru
+   Para execução do container:
+    - docker run -i carguru:latest 
+2. Sim, é possível. Para reaproveitamento de container já usado:
+    - docker start -i <id_do_container>
+
+3. Para criação da imagem do projeto "mascara_texto":
+    - docker build -f ./mascara_texto/Dockerfile -t mascara:latest ./mascara_texto
+   Para execução do container:
+    - docker run -i mascara:latest 
