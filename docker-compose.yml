@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  etl:
+    container_name: etl_container
+    build: 
+        dockerfile: Dockerfile
+        context: .
+    volumes:
+      - ./data:/usr/app/src/data
